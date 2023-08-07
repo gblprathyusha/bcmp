@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Report</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+        .form-container {
+            width: 400px;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+        label {
+            font-weight: bold;
+        }
+        select, input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f8f9fa;
+            color: #495057;
+        }
+        input[type="date"] {
+            appearance: none;
+            padding: 8px;
+        }
+        label[for="checkMe"] {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Search Report</h2>
+
+    <form action="process_form.php" method="post">
+
+       
+  
+
+        <label for="category">Category:</label>
+        <select id="category" name="category">
+            <option value="" disabled selected>Choose</option>
+            <option value="finance">Finance</option>
+            <option value="operation">Operation</option>
+            <option value="compliance">Compliance</option>
+        </select>
+
+        <label for="fileType">File Type:</label>
+        <select id="fileType" name="fileType">
+            <option value="" disabled selected>Choose</option>
+            <option value=".csf">.csf</option>
+            <option value=".pdf">.pdf</option>
+            <option value=".docx">.docx</option>
+        </select>
+
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" name="startDate">
+
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate" name="endDate">
+
+      <label for="clientid">Client Id:</label>
+  <input type="text" id="clientid" name="clientid"><br><br>
+       
+
+        <button type="submit">Search</button>
+    </form>
+</div>
+
+</body>
+</html>
